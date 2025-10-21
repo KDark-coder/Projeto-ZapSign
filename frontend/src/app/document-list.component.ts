@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { DocumentService } from './document.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-document-list',
+  standalone: true,
+  imports: [CommonModule, HttpClientModule],
   template: `
     <h2>Documentos</h2>
     <div *ngIf="loading">Carregando...</div>
@@ -15,5 +19,11 @@ export class DocumentListComponent implements OnInit {
   documents: any[] = [];
   loading = false;
   constructor(private svc: DocumentService) {}
-  ngOnInit(){ this.loading = true; this.svc.list().subscribe(r=>{ this.documents = r; this.loading = false; }, ()=> this.loading = false); }
+  ngOnInit(){
+    this.loading = true;
+    this.svc.list().subscribe(
+      (r: any) => { this.documents = r; this.loading = false; },
+      () => this.loading = false
+    );
+  }
 }
