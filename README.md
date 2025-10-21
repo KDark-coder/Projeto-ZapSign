@@ -160,5 +160,5 @@ Agradeço pela oportunidade, estou disponível para explicar decisões, debugar 
 ---
 
 **Contato para dúvidas ou revisão:**  
-- [Seu e-mail]  
-- [Seu LinkedIn]
+- [nsdbferreira@gmail.com]  
+- Desde já, agradeço imensamente a oportunidade!
