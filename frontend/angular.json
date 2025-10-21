@@ -1,0 +1,1 @@
+{ "version": 1, "projects": { "zapsign-frontend": { "projectType": "application", "root": "", "sourceRoot": "src", "architect": {} } }}
